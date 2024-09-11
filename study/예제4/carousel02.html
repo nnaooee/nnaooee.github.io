@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <title>Carousel (swiper)</title>
+    <style>
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+        .swiper-slide > img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 이미지 슬라이드(캐러셀) 컨테이너 -->
+    <div class="swiper">
+        <!-- Swiper wrapper -->
+        <div class="swiper-wrapper">
+        <!-- 개별 슬라이드 -->
+        <div class="swiper-slide">
+            <img src="images/image01.jpg" />
+        </div>
+        <div class="swiper-slide">
+            <img src="images/image02.jpg" />
+        </div>
+        <div class="swiper-slide">
+            <img src="images/image03.jpg" />
+        </div>
+        ...
+        </div>
+        <!-- 페이지 표시(pagination) -->
+        <div class="swiper-pagination"></div>
+    
+    </div>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+</body>
+    
+</html>

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#vid-a {
+    width: 100%;
+}
+#vid-b {
+    width: 80%;
+    position: relative;
+    margin: 0 auto; /* position이 relative일 때 가로 정렬 방법, 좌우 여백을 자동으로 동일하게 적용 */
+}
+#vid-b > video {
+    width: 100%;
+}
+#vid-c {
+    width: 100%;
+    height: 400px;
+}
+#vid-c > video {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+}
