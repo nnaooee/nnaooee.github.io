@@ -14,7 +14,11 @@
     <p>스크립트 전</p>
     <p>스크립트 후</p>
     <script>
-       alert( 'Hello, world!' );
-    </script> <!--스크립트 코드는 맨 뒤에 적기-->
+        let value = true;
+        alert(typeof value); //boolean
+
+        value = String(value); // 변수 value엔 문자열 "true"가 저장됩니다.
+        alert(typeof value); // string
+    </script>
 </body>
 </html>
