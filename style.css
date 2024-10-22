@@ -1,3 +1,12 @@
+* {
+    background-color: plum;
+}
+
+@font-face {
+    font-family: NOTO;
+    src: url(NotoSansKR-VariableFont_wght.ttf);
+}
+
 html,
 body {
   display: flex;
@@ -5,7 +14,6 @@ body {
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
-  background-color: purple;
 }
 
 .container {
@@ -15,11 +23,11 @@ body {
   max-width: 700px;
   max-height: 700px;
   border-radius: 9px;
-  border: solid 2px skyblue;
+  /* border: solid 2px skyblue; */
 }
 
 #element {
-  background: blue;
+  background: papayawhip;
   border-radius: 15px;
   margin: 1rem;
   width: 100px;
