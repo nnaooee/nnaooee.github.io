@@ -1,16 +1,20 @@
-gsap.registerPlugin(Draggable, InertiaPlugin);
+gsap.registerPlugin(Flip);
 
-Draggable.create(".flair--1", {
-  type: "x",
-  bounds: ".container"
-});
+let button = document.querySelector("button");
 
-Draggable.create(".flair--3b", {
-  type: "rotation",
-  inertia: true
-});
-
-Draggable.create(".flair--4b", {
-  bounds: ".container",
-  inertia: true
+button.addEventListener("click", function() {
+  // get the current state (before we make changes)
+  let state = Flip.getState(element, "backgroundColor");
+  
+  // now make our changes
+  element.classList.toggle("absolute");
+  element.innerText = element.classList.contains("absolute") ?  "absolute" : "relative";
+  
+  // "FLIP" animate from that previous state. 
+  Flip.from(state, {
+    duration: 1,
+    ease: "power1.inOut",
+    spin: 2,
+  });
+  
 });
