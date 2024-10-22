@@ -5,6 +5,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
+  background-color: purple;
 }
 
 .container {
@@ -14,11 +15,11 @@ body {
   max-width: 700px;
   max-height: 700px;
   border-radius: 9px;
-/*   border: solid 2px red; */
+  border: solid 2px skyblue;
 }
 
 #element {
-  background: var(--color-ui-gradient-background);
+  background: blue;
   border-radius: 15px;
   margin: 1rem;
   width: 100px;
@@ -26,7 +27,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: pink;
+  color: green;
   border: solid 2px transparent;
 }
 
@@ -45,7 +46,7 @@ body {
   right: 30px;
   border-radius: 25px;
   margin: 1rem;
-  border: dashed 2px var(--color-surface-white);
+  border: dashed 2px yellow;
   z-index: -1;
 }
 
