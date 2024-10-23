@@ -4,9 +4,24 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: plum;
-  font-family: 'Raleway', serif;
+  background-color: rgb(251, 236, 190);
+  font-family: sans-serif;
+  flex-direction: column;
 }
+
+h1, h4 {
+  color: black;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+h4:hover {
+  color: rgb(64, 194, 189);
+}
+
 
 a {
   display: flex;
@@ -16,10 +31,11 @@ a {
 }
 
 a > img {
-  width: 200px;
+  width: 180px;
   height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
+
