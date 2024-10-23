@@ -1,5 +1,5 @@
 const spin = gsap.timeline({repeat:-1})
-  .set("#svg-stage", { opacity: 1 })
+  .set("#svg-stage", { opacity: 100 })
   .fromTo("#clover", {
     transformOrigin: "50%",
     x: 30,
