@@ -18,17 +18,11 @@ a {
 }
 
 a > img {
-  width: 100%;
-  height: 100%;
+  width: 10%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-a > span {
-  font-size: 30px;
-  font-weight: bold;
-  color: #00FFC6;
   transition: transform 100ms ease-out;
 }
