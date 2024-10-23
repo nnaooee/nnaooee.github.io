@@ -19,6 +19,7 @@ a {
 
 a > span {
   font-size: 30px;
+  font-weight: bold;
   color: #00FFC6;
   transition: transform 100ms ease-out;
 }
