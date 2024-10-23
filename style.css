@@ -16,8 +16,8 @@ a {
 }
 
 a > img {
-  width: 80px;
-  height: 100px;
+  width: 200px;
+  height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
