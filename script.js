@@ -1,28 +1,35 @@
-const spin = gsap.timeline({repeat:-1})
-  .set("#svg-stage", { opacity: 100 })
-  .fromTo("#clover", {
-    transformOrigin: "50%",
-    x: 30,
-    y: 30
-  },{
-    duration: 50,
-    rotation: 360,
-    ease: "none",
-  });
+function magneticButton(element) {
+    const children = element.children[0]
 
-Draggable.create("#clover", {
-  type: "rotation",
-  trigger: "#svg-stage",
-  inertia: true,
-  onPressInit: () => spin.pause(),
-  onDrag: setSpinProgress,  // on drag & throw, use rotation as a progress value for the spin timeline
-  onThrowUpdate: setSpinProgress,
-  onThrowComplete: () => {
-    spin.resume();
-    gsap.fromTo(spin, { timeScale: 2 }, { timeScale: 1, ease: "power1.in" });
+    element.addEventListener('mousemove', e => {
+      const { offsetLeft, offsetTop, offsetWidth, offsetHeight } = element
+      const left = e.pageX - offsetLeft
+      const top = e.pageY - offsetTop
+      const centerX = left - offsetWidth / 2
+      const centerY = top - offsetHeight / 2
+      const d = Math.sqrt(centerX**2 + centerY**2)
+
+      gsap.to(element, 0.5, {
+        x: centerX / 1.5,
+        y: centerY / 1.5,
+        ease: Elastic.easeOut
+      })
+
+      children.style.transform = `
+        translate3d(${centerX / 4}px, ${centerY / 4}px, 0)
+        rotate3d(${-centerY / 100}, ${centerX / 100}, 0, ${d / 10}deg)
+      `
+    })
+
+    element.addEventListener('mouseleave', () => {
+      gsap.to(element, 1.2, {
+        x: 0,
+        y: 0,
+        ease: Elastic.easeOut.config(1, 0.1)
+      })
+      children.style.transform = ''
+    })
   }
-});
 
-function setSpinProgress() {
-  spin.progress(gsap.utils.wrap(0, 360, this.rotation) / 360);
-}
+  const a = document.querySelector('a')
+  magneticButton(a)

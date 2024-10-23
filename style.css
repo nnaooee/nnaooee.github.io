@@ -1,24 +1,28 @@
-* {
-    background-color: yellowgreen;
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  font-family: 'Raleway', serif;
 }
 
-@font-face {
-    font-family: NOTO;
-    src: url(NotoSansKR-VariableFont_wght.ttf);
+a {
+  background-color: #7319FF;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-main {
-    width:100%;
-    min-width:400px;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-  }
-  
-  #svg-stage {
-    width: 33%;
-    max-width:500px;
-    margin-bottom:8vh;
-  }
+a > span {
+  font-size: 30px;
+  color: #00FFC6;
+  transition: transform 100ms ease-out;
+}
