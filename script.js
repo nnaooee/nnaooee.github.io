@@ -19,7 +19,7 @@ Draggable.create("#clover", {
   onThrowUpdate: setSpinProgress,
   onThrowComplete: () => {
     spin.resume();
-    gsap.fromTo(spin, { timeScale: 0 }, { timeScale: 1, ease: "power1.in" });
+    gsap.fromTo(spin, { timeScale: 2 }, { timeScale: 1, ease: "power1.in" });
   }
 });
 
