@@ -11,13 +11,9 @@ html, body {
 }
 
 a {
-  background-color: #7319FF;
-  width: 300px;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   cursor: pointer;
 }
 
