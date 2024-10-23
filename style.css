@@ -4,7 +4,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightblue;
+  background-color: plum;
   font-family: 'Raleway', serif;
 }
 
@@ -16,11 +16,10 @@ a {
 }
 
 a > img {
-  width: 200px;
-  height: 200px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: transform 100ms ease-out;
 }
