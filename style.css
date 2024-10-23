@@ -7,60 +7,18 @@
     src: url(NotoSansKR-VariableFont_wght.ttf);
 }
 
-html,
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.container {
-  position: relative;
-  width: 90vw;
-  height: 90vh;
-  max-width: 700px;
-  max-height: 700px;
-  border-radius: 9px;
-  /* border: solid 2px skyblue; */
-}
-
-#element {
-  background: papayawhip;
-  border-radius: 15px;
-  margin: 1rem;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: green;
-  border: solid 2px transparent;
-}
-
-#element.absolute,
-#absolute-marker {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-}
-
-#absolute-marker {
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  bottom: 30px;
-  right: 30px;
-  border-radius: 25px;
-  margin: 1rem;
-  border: dashed 2px yellow;
-  z-index: -1;
-}
-
-button {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
+main {
+    width:100%;
+    min-width:400px;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  #svg-stage {
+    width: 33%;
+    max-width:500px;
+    margin-bottom:8vh;
+  }
